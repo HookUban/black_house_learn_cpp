@@ -1,3 +1,4 @@
+/*
 
 #include <windows.h>
 #include <iostream>
@@ -5,11 +6,13 @@
 using namespace std;
 #include <string>
 
+*/
 /*
  *
  * wosh注释
  *
- * */
+ * *//*
+
 //
 //int main()
 //{
@@ -21,6 +24,7 @@ using namespace std;
 //    return 0;
 //}
 
+*/
 /*
 int main()
 {
@@ -30,6 +34,8 @@ int main()
 //
 //    cout<<"a = "<<a<<endl;
 
+*//*
+
 */
 /*
  * #define 宏常量
@@ -37,6 +43,8 @@ int main()
  *
  *
  * *//*
+*/
+/*
 
     const int a = 10;
     int const b = 10;
@@ -46,14 +54,17 @@ int main()
 
 
     system("pause");
-}*/
+}*//*
 
+
+*/
 /*
 * 数据类型
 *
 *
 *
-* */
+* *//*
+
 
 int main() {
 
@@ -102,6 +113,7 @@ int main() {
 //        Sleep(1000);
 //    }
 //
+*/
 /*
     // c风格
     char arr[] = "hello, world";
@@ -110,7 +122,8 @@ int main() {
     string str = "hello, world";
     cout << str << endl;
     cout << string("hello, world") << endl;
-*/
+*//*
+
 //    bool flag = true;
 //    bool tmp = false;
 //    cout << "flag = " << flag << endl;
@@ -219,6 +232,7 @@ int main() {
 //        cout << i++ << endl;
 //    }
 //
+*/
 /*
 
     //猜数字游戏
@@ -266,11 +280,50 @@ int main() {
         }
 
     }
-*/
+*//*
+
 
 
 
     system("pause");
 
 }
+
+*/
+/*
+
+
+int main()
+{
+    SetConsoleOutputCP(CP_UTF8);
+
+//    int i ;
+//    int j ;
+//    for (i = 1; i <= 9; i++)
+//    {
+//        for(j = 1; j <= i; j++)
+//        {
+//            cout<<j<<"*"<<i<<"="<<i*j<<"\t";
+//        }
+//        cout<<endl;
+//    }
+    cout<<"1"<<endl;
+    cout<<"2"<<endl;
+    cout<<"3"<<endl;
+    cout<<"4"<<endl;
+    goto label;
+
+    cout<<"5"<<endl;
+    cout<<"6"<<endl;
+    label:
+    cout<<"7"<<endl;
+
+
+}*/
+
+
+#include <iostream>
+#include <windows.h>
+
+using namespace std;
 

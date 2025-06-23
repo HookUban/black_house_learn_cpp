@@ -1,0 +1,1 @@
+"D:\Program Files\JetBrains\CLion 2024.3.5\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=D:/Program Files/JetBrains/CLion 2024.3.5/bin/ninja/win/x64/ninja.exe" -G Ninja -S C:\Users\xiaoh\Desktop\cpp_learning\通讯录管理系统 -B C:\Users\xiaoh\Desktop\cpp_learning\通讯录管理系统\cmake-build-debug

@@ -1,0 +1,3 @@
+C:/Users/xiaoh/Desktop/cpp_learning/ContactManagementSystem/cmake-build-release/CMakeFiles/ContactManagementSystem.dir
+C:/Users/xiaoh/Desktop/cpp_learning/ContactManagementSystem/cmake-build-release/CMakeFiles/edit_cache.dir
+C:/Users/xiaoh/Desktop/cpp_learning/ContactManagementSystem/cmake-build-release/CMakeFiles/rebuild_cache.dir

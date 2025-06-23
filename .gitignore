@@ -30,3 +30,18 @@
 *.exe
 *.out
 *.app
+
+# 排除所有位置的 cmake-build-* 目录
+**/cmake-build-debug/
+**/cmake-build-release/
+**/cmake-build-*/
+
+# 排除所有 CLion 相关生成目录
+**/out/
+**/build/
+**/generated/
+
+# 通用 CLion 和 IDE 配置排除
+.idea/
+*.iml
+cmake-build-*/

@@ -6,6 +6,7 @@ using namespace std;
 // 运算法重载概念：对已有的运算符重新进行定义，赋予其另一种功能，以适应不同的数据类型
 
 
+/*
 // 加号运算符重载
 
 
@@ -76,5 +77,51 @@ int main()
 {
     test01();
 
+    return 0;
+}*/
+
+
+// 左移运算符重载
+
+class Person
+{
+    friend ostream& operator<<(ostream& cout, Person p);
+
+
+public:
+    Person(int a, int b)
+    {
+        m_A = a;
+        m_B = b;
+    }
+private:
+    // 利用成员函数重载 左移运算符 p.operator<<(cout)  简化版本  p << cout
+    // 通常不会利用成员函数重载 左移运算符，因为无法实现cout在左侧
+
+    int m_A;
+    int m_B;
+};
+
+// 只能利用全局函数重载 左移运算符
+ostream& operator<<(ostream& cout, Person p) // 本质， operator << (cout, p) 简化 cout << p
+{
+    cout << "m_A = " << p.m_A << " m_B = " << p.m_B << endl;
+    return cout;
+}
+
+void test01()
+{
+    Person p(10, 10);
+//    p.m_A = 10;
+//    p.m_B = 10;
+
+//    cout << p.m_A << endl;
+    cout << p << endl<<"hello world"<<endl;
+}
+
+
+int main()
+{
+    test01();
     return 0;
 }

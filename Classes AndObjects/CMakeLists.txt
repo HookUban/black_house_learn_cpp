@@ -3,4 +3,10 @@ project(Classes_AndObjects)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Classes_AndObjects main.cpp)
+add_executable(
+        Classes_AndObjects
+        point.cpp
+        circle.cpp
+        main.cpp
+
+)

@@ -71,10 +71,26 @@ void test01()
     doSpeak(dog);
 }
 
+void test02()
+{
+    cout << "sizeof Animal = " << sizeof(Animal)<< endl;
+}
 
 int main()
 {
-    test01();
-
+//    test01();
+    test02();
     return 0;
 }
+
+/*
+ * 多态满足条件
+ * 子类重写父类中的虚函数
+ *
+ * 多态使用条件
+ *
+ * 父类指针或引用指向子类对象
+ * 重写：函数返回值类型 函数名 参数列表 完全相同
+ *
+ *
+ * **/

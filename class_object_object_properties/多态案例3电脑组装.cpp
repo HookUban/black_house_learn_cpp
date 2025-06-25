@@ -54,6 +54,25 @@ public:
         m_vc->display();
         m_mem->strorage();
     }
+    // 提供析构函数，释放3个电脑零件
+    ~Computer()
+    {
+        if (m_cpu != NULL)
+        {
+            delete m_cpu;
+            m_cpu = NULL;
+        }if (m_vc != NULL)
+        {
+            delete m_vc;
+            m_vc = NULL;
+        }
+        if (m_mem != NULL)
+        {
+            delete m_mem;
+            m_mem = NULL;
+        }
+
+    }
 private:
     CPU* m_cpu;
     VideoCard* m_vc;
@@ -86,7 +105,7 @@ public:
 class IntelMemory:public Memory
 {
 public:
-    virtual void storage()
+    virtual void strorage()
     {
         cout << "Intel内存条开始存储" << endl;
 
@@ -115,7 +134,7 @@ public:
 class LenovoMemory:public Memory
 {
 public:
-    virtual void storage()
+    virtual void strorage()
     {
         cout << "Lenovo内存条开始存储" << endl;
 
@@ -125,10 +144,35 @@ public:
 
 void test01()
 {
+    // 第一台电脑零件
+    cout<< "第一台电脑开始工作"<<endl;
+    CPU* intelCPU = new IntelCPU;
+    VideoCard* intelCard = new IntelVideoCard;
+    Memory* intelMem = new IntelMemory;
+    // 创建第一台电脑
+    Computer* computer1 = new Computer(intelCPU, intelCard, intelMem);
+    computer1->work();
+    delete computer1;
+
+    cout<<"---------------------------------"<<endl;
+    cout<< "第二台电脑开始工作"<<endl;
+    // 第二台电脑组装
+    Computer* computer2 = new Computer(new LenovoCPU, new LenovoVideoCard, new LenovoMemory);
+    computer2->work();
+    delete computer2;
+
+    cout<<"---------------------------------"<<endl;
+    cout<< "第三台电脑开始工作"<<endl;
+    // 第二台电脑组装
+    Computer* computer3 = new Computer(new LenovoCPU, new IntelVideoCard, new LenovoMemory);
+    computer3->work();
+    delete computer3;
+
 
 }
 int main()
 {
+    test01();
 
     return 0;
 }

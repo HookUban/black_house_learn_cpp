@@ -77,7 +77,7 @@ int main() {
  *
  * **/
 
-class Person
+/*class Person
 {
 public:
     Person()
@@ -133,7 +133,55 @@ void test01()
     // 隐式转换法
     Person p4 = 10; // 相当于Person p4 = Person(10);
     Person p5 = p4;
+}*/
+
+/*
+int main()
+{
+    test01();
+
+    return 0;
+}*/
+
+
+
+
+#include <iostream>
+using namespace std;
+
+// 继承中的对象模型
+class Base
+{
+public:
+    int m_A;
+
+protected:
+    int m_B = 10;
+private:
+    int m_C;
+
+};
+
+class Son:public Base
+{
+public:
+    int m_D;
+
+};
+
+void test01()
+{
+    Son s1;
+    s1.m_A = 10;
+//    s1.m_B = 10;
+//    s1.m_C = 10;
+    s1.m_D = 10;
+    // 父类中所有非静态成员属性都会被子类继承下去
+    // 父类中私有成员属性是被编译器给隐藏了，因此是访问不到的，但是确实被继承下去了
+    cout << sizeof(s1) << endl; // 16 4个int
+
 }
+
 
 int main()
 {

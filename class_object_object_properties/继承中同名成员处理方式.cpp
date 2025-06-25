@@ -8,7 +8,8 @@ using namespace std;
  *      访问子类同名成员直接访问即可
  *      访问父类同名成员，需要加作用域，类名::成员
  *
- * */
+ * *//*
+
 
 
 // 继承中同名处理
@@ -70,10 +71,71 @@ int main()
     return 0;
 }
 
+*/
 /**
  * 总结：
  *      1.子类对象可以直接访问到子类中同名成员
  *      2.子类对象加作用域可以访问到父类同名成员
  *      3.当子类与父类拥有同名的成员函数，子类会隐藏父类中同名成员函数，加作用域可以访问父类中同名函数
  *
- * */
+ * *//*
+
+
+*/
+
+
+
+class Base
+{
+public:
+    static int m_A;
+
+    static void func()
+    {
+        cout << "Base static - func()" << endl;
+    }
+};
+
+int Base::m_A = 10;
+
+class Son:public Base
+{
+public:
+    static int m_A;
+    static void func()
+    {
+        cout << "Son static - func()" << endl;
+    }
+};
+
+int Son::m_A = 20;
+
+void test01()
+{
+    Son s;
+    cout << "Son m_A = " << s.m_A << endl;
+    cout << "Son m_A = " << s.Base::m_A << endl;
+
+    // 通过类名访问
+    cout << "通过类名访问" << Son::m_A << endl;
+    //  第一个::代表类名方式访问，第二个::代表成员访问方式
+    cout << "通过类名访问" << Son::Base::m_A << endl;
+    cout << "通过类名访问" << Base::m_A << endl;
+}
+
+void test02()
+{
+    Son s;
+    s.func();
+    s.Base::func();
+
+    Son::func();
+    Son::Base::func();
+}
+int main()
+{
+
+//    test01();
+    test02();
+    return 0;
+}

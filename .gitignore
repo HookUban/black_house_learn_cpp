@@ -44,4 +44,4 @@
 # 通用 CLion 和 IDE 配置排除
 .idea/
 *.iml
-cmake-build-*/
+cmake-build-*/".vs/" 

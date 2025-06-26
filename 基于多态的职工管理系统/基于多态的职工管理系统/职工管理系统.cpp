@@ -13,48 +13,55 @@ using namespace std;
 */
 
 #include "workerManager.h"
+#include "worker.h"
+#include "employee.h"
+
 
 int main()
 {
+	// 测试代码
+	Worker* worker = new Employee(1, "张三", 1);
+	worker->showInfo();
 
-	// 实例化管理者对象
-	WorkerManager wm;
 
-	int choice = 0; // 用户选择
+	//// 实例化管理者对象
+	//WorkerManager wm;
 
-	while (true)
-	{
-		// 调用展示菜单的成员函数
-		wm.Show_Menu();
-		cout << "请输入您的选择:" << endl;
-		cin >> choice;
+	//int choice = 0; // 用户选择
 
-		switch (choice)
-		{
-		case 0: // 退出系统
-			wm.ExitSystem();
-			break;
+	//while (true)
+	//{
+	//	// 调用展示菜单的成员函数
+	//	wm.Show_Menu();
+	//	cout << "请输入您的选择:" << endl;
+	//	cin >> choice;
 
-		case 1:	// 增加职工
-			break;
+	//	switch (choice)
+	//	{
+	//	case 0: // 退出系统
+	//		wm.ExitSystem();
+	//		break;
 
-		case 2: // 显示职工
-			break;
-		case 3: // 删除职工
-			break;
-		case 4: // 修改职工
-			break;
-		case 5: // 查找职工
-			break;
-		case 6: // 排序职工
-			break;
-		case 7: // 清空文档
-			break;
-		default:
-			system("cls");
+	//	case 1:	// 增加职工
+	//		break;
 
-		}
-	}
+	//	case 2: // 显示职工
+	//		break;
+	//	case 3: // 删除职工
+	//		break;
+	//	case 4: // 修改职工
+	//		break;
+	//	case 5: // 查找职工
+	//		break;
+	//	case 6: // 排序职工
+	//		break;
+	//	case 7: // 清空文档
+	//		break;
+	//	default:
+	//		system("cls");
+
+	//	}
+	//}
 
 
 	system("pause");

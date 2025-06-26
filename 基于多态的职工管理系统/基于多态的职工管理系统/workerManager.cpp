@@ -258,11 +258,31 @@ void WorkerManager::Show_Emp()
 		}
 	}
 	// 按任意键清屏
-	system("pause");
+	system("pause"); 
 	system("cls");
 
 }
 
+// 删除职工
+void WorkerManager::Del_Emp()
+{
+
+}
+
+// 判断职工是否存在函数，如果存在返回职工所在数组中的位置，不存在返回-1
+int WorkerManager::IsExist(int id)
+{
+	int index = -1;
+	for (int i = 0; i < this->m_EmpNum; i++)
+	{
+		if (this->m_EmpArray[i]->m_Id == id)
+		{
+			return i;
+		}
+
+	}
+	return index; // 如果不存在，返回-1
+}
 
 WorkerManager::~WorkerManager()
 {

@@ -23,6 +23,7 @@
     <ClCompile Include="01-函数模板语法.cpp" />
     <ClCompile Include="02-函数模板注意事项.cpp" />
     <ClCompile Include="04-普通函数和函数模板的区别.cpp" />
+    <ClCompile Include="05-普通函数和函数模板调用规则.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

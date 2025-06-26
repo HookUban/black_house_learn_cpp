@@ -59,6 +59,7 @@ int main()
 			break;
 
 		case 1:	// 增加职工
+			wm.Add_Emp();
 			break;
 
 		case 2: // 显示职工

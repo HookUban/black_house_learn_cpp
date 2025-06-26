@@ -118,9 +118,23 @@ void WorkerManager::Add_Emp()
 			int id; // 职工编号
 			string name; // 职工姓名
 			int dSelect; // 部门选择
+			int flag = 0; // 用于判断职工编号是否存在
 
-			cout << "请输入第" << i + 1 << "个职工编号：" << endl;
-			cin >> id;
+			while (!flag)
+			{
+				cout << "请输入第" << i + 1 << "个职工编号：" << endl;
+				cin >> id;
+				if(this->IsExist(id) != -1)
+				{
+					cout << "职工编号已存在，请重新输入" << endl;
+					flag = 0; // 编号存在，继续循环
+				}
+				else
+				{
+					flag = 1; // 编号不存在，跳出循环
+				}
+			}
+
 
 			cout << "请输入第" << i + 1 << "个职工姓名：" << endl;
 			cin >> name;
@@ -321,7 +335,7 @@ int WorkerManager::IsExist(int id)
 	return index; // 如果不存在，返回-1
 }
 
-
+// 修改职工
 void WorkerManager::Mod_Emp()
 {
 	if (this->m_FileIsEmpty)
@@ -388,6 +402,79 @@ void WorkerManager::Mod_Emp()
 	}
 	system("pause");
 	system("cls");
+}
+
+// 查找职工
+void WorkerManager::Find_Emp()
+{
+	if (this->m_FileIsEmpty)
+	{
+		cout << "文件不存在或者记录为空" << endl;
+
+	}
+	else
+	{
+		cout << "请输入查找方式" << endl;
+		cout << "1.按照职工编号查找" << endl;
+		cout << "2.按照职工姓名查找" << endl;
+
+		int select = 0;
+		cin >> select;	
+		
+		if (select == 1)
+		{
+			// 按照编号查
+			int id;
+			cout << "请输入查找的职工的编号:" << endl;
+			cin >> id;
+			int ret = this->IsExist(id);
+			if (ret != -1)
+			{
+				cout << "查找成功，职工信息如下：" << endl;
+				this->m_EmpArray[ret]->showInfo();
+
+			}
+			else
+			{
+				cout << "查找失败，职工不存在" << endl;
+			}
+
+		}
+		else if (select == 2)
+		{
+			// 按照姓名查
+			string name;
+			bool flag = false;
+			cout << "请输入查找的职工姓名:" << endl;
+			cin >> name;
+			for (int i = 0; i < this->m_EmpNum; i++)
+			{
+				if (this->m_EmpArray[i]->m_Name == name)
+				{
+					cout << "查找成功，职工信息如下：" 
+						<< this->m_EmpArray[i]->m_Id
+						<<endl;
+					this->m_EmpArray[i]->showInfo();
+					flag = true; // 找到职工
+
+				}
+			}
+			if (!flag)
+			{
+				cout << "查找失败，职工不存在" << endl;
+			}
+		}
+		else
+		{
+			cout << "输入有误，请重新输入" << endl;
+		}
+	}
+
+	// 按任意键清屏
+	system("pause");
+	system("cls");
+
+
 }
 
 WorkerManager::~WorkerManager()

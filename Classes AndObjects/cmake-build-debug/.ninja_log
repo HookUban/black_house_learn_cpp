@@ -1,0 +1,7 @@
+# ninja log v6
+8	393	7724291036514829	CMakeFiles/Classes_AndObjects.dir/main.cpp.obj	ec761882df4023a8
+394	547	7724287169107361	Classes_AndObjects.exe	d15cd26cdbf57270
+6	646	7724291536841075	build.ninja	bb2092653466ce3e
+5	110	7724291537231346	CMakeFiles/Classes_AndObjects.dir/point.cpp.obj	8885e5fe29c42938
+20	116	7724291537379454	CMakeFiles/Classes_AndObjects.dir/circle.cpp.obj	f0f0e291f98e5a5c
+116	554	7724291538341563	Classes_AndObjects.exe	1cd85ee4c5da00bf

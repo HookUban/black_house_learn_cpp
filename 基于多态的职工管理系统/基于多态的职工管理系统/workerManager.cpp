@@ -266,7 +266,44 @@ void WorkerManager::Show_Emp()
 // 删除职工
 void WorkerManager::Del_Emp()
 {
+	if (this->m_FileIsEmpty)
+	{
+		cout << "文件不存在或记录为空" << endl;
 
+	}
+	else
+	{
+		// 按照职工的编号删除
+		cout << "请输入要删除的职工编号：" << endl;
+		int id = -1;
+		cin >> id;
+
+		int index = this->IsExist(id); // 判断职工是否存在
+		if (index != -1)
+		{
+			// 职工存在,并且要删除index上的职工
+			// 数据前移
+			for (int i = index; i < this->m_EmpNum - 1; i++)
+			{
+				this->m_EmpArray[i] = this->m_EmpArray[i + 1];
+			}
+			this->m_EmpNum--;// 更新数组中职工人数
+			// 数据同步更新到文件
+			this->save();
+			cout << "删除成功" << endl;
+
+
+		}
+		else
+		{
+			cout << "删除失败，职工不存在" << endl;
+		}
+
+	}
+
+	// 按任意键清屏
+	system("pause");
+	system("cls");
 }
 
 // 判断职工是否存在函数，如果存在返回职工所在数组中的位置，不存在返回-1

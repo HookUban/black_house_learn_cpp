@@ -66,19 +66,8 @@ int main()
 			wm.Show_Emp();
 			break;
 		case 3: // 删除职工
-		{
-			// 测试
-			int ret = wm.IsExist(6);
-			if (ret != -1)
-			{
-				cout << "职工存在，职工编号为：" << ret << endl;
-			}
-			else
-			{
-				cout << "职工不存在" << endl;
-			}
+			wm.Del_Emp();
 			break;
-		}
 		case 4: // 修改职工
 			break;
 		case 5: // 查找职工

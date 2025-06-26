@@ -17,4 +17,5 @@ public:
 
 	// 获取岗位名称
 	virtual string getDeptName();
+
 };

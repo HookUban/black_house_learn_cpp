@@ -1,34 +1,34 @@
-
-#include <iostream>
-using namespace std;
-
-// 函数模板
-
-// 两个整型交换函数
-void swapInt(int& a, int& b)
-{
-	int temp = a;
-	a = b;
-	b = temp;
-}
-
-// 交换两个浮点型函数
-
-void swapDouble(double& a, double& b)
-{
-	double temp = a;
-	a = b;
-	b = temp;
-}
-
-// 函数模板
-template <typename T> // 声明一个模板，告诉编译器后面紧跟着的T不要报错，T是一个通用数据类型
-void mySwap(T& a, T& b)
-{
-	T temp = a;
-	a = b;
-	b = temp;
-}
+//
+//#include <iostream>
+//using namespace std;
+//
+//// 函数模板
+//
+//// 两个整型交换函数
+//void swapInt(int& a, int& b)
+//{
+//	int temp = a;
+//	a = b;
+//	b = temp;
+//}
+//
+//// 交换两个浮点型函数
+//
+//void swapDouble(double& a, double& b)
+//{
+//	double temp = a;
+//	a = b;
+//	b = temp;
+//}
+//
+//// 函数模板
+//template <typename T> // 声明一个模板，告诉编译器后面紧跟着的T不要报错，T是一个通用数据类型
+//void mySwap(T& a, T& b)
+//{
+//	T temp = a;
+//	a = b;
+//	b = temp;
+//}
 
 //int main()
 //{
@@ -50,7 +50,7 @@ void mySwap(T& a, T& b)
 //	//cout << c << " " << d << endl;
 //	//swapDouble(c, d);
 //	//cout << c << " " << d << endl;
-//
+
 //
 //
 //

@@ -38,6 +38,8 @@ public:
 	// 统计文件中人数
 	int get_EmpNum();
 
+	// 初始化职工
+	void init_Emp();
 
 	//析构函数
 	~WorkerManager();

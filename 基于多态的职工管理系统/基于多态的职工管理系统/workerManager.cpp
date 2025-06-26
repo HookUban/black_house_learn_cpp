@@ -534,6 +534,45 @@ void WorkerManager::Sort_Emp()
 	}
 }
 
+// 清空文件
+void WorkerManager::Clean_File()
+{
+	cout << "确认清空文件吗？" << endl;
+	cout << "1.确认清空" << endl;
+	cout << "2.取消清空" << endl;
+	int select = 0;
+	cin >> select;
+
+	if (select == 1)
+	{
+		// 清空文件
+		ofstream ofs(FILENAME, ios::trunc); // 删除文件后重新创建
+		ofs.close();
+
+		if (this->m_EmpArray != NULL)
+		{
+			// 删除堆区的每个职工对象
+			for (int i = 0; i < this->m_EmpNum; i++)
+			{
+				delete this->m_EmpArray[i];
+				m_EmpArray[i] = NULL; // 释放职工对象
+			}
+			// 删除堆区数组指针
+			delete[] this->m_EmpArray;
+
+			this->m_EmpArray = NULL;
+			this->m_EmpNum = 0;
+			this->m_FileIsEmpty = true;
+
+		}
+
+		cout << "清空成功" << endl;
+	}
+
+	system("pause");
+	system("cls");
+}
+
 WorkerManager::~WorkerManager()
 {
 	if (this->m_EmpArray != NULL)

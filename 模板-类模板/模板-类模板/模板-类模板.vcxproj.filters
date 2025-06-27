@@ -27,5 +27,8 @@
     <ClCompile Include="04-类模板对象做函数参数.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="05-类模板与继承.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

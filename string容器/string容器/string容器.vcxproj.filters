@@ -27,5 +27,8 @@
     <ClCompile Include="04-string容器字符串查找和替换.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="05-string容器字符串比较.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

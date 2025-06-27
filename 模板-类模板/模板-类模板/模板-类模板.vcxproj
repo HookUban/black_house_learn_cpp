@@ -131,10 +131,12 @@
     <ClCompile Include="06-类模板成员函数类外实现.cpp" />
     <ClCompile Include="07-类模板分文件编写.cpp" />
     <ClCompile Include="08-类模板与友元.cpp" />
+    <ClCompile Include="09-类模板案例-数组类封装.cpp" />
     <ClCompile Include="person.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="person.hpp" />
+    <ClInclude Include="MyArray.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

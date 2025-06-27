@@ -18,19 +18,11 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="03-函数模板案例-数组排序.cpp" />
-    <ClCompile Include="01-函数模板语法.cpp" />
-    <ClCompile Include="02-函数模板注意事项.cpp" />
-    <ClCompile Include="04-普通函数和函数模板的区别.cpp" />
-    <ClCompile Include="05-普通函数和函数模板调用规则.cpp" />
-    <ClCompile Include="06-模板的局限性.cpp" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{82615301-77e2-449c-b469-bc9551b1738c}</ProjectGuid>
-    <RootNamespace>C提高编程模版容器</RootNamespace>
+    <ProjectGuid>{d7cab6d0-5d59-4777-abea-f58754e80fc3}</ProjectGuid>
+    <RootNamespace>模板类模板</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -130,6 +122,9 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="01-类模板语法.cpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -27,5 +27,8 @@
     <ClCompile Include="04-list容器-插入和删除.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="05-list容器-数据存取.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

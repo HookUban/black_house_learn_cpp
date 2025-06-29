@@ -36,5 +36,8 @@
     <ClCompile Include="07-set容器-排序.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="08-set容器-排序（自定义类型）.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -130,6 +130,7 @@
     <ClCompile Include="05-set容器-set和multiset的区别.cpp" />
     <ClCompile Include="06-pair对组-对组的创建.cpp" />
     <ClCompile Include="07-set容器-排序.cpp" />
+    <ClCompile Include="08-set容器-排序（自定义类型）.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -128,6 +128,7 @@
     <ClCompile Include="03-list容器-大小操作.cpp" />
     <ClCompile Include="04-list容器-插入和删除.cpp" />
     <ClCompile Include="05-list容器-数据存取.cpp" />
+    <ClCompile Include="06-list容器-反转和排序.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

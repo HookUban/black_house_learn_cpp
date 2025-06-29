@@ -127,6 +127,7 @@
     <ClCompile Include="02-set容器-大小和交换.cpp" />
     <ClCompile Include="03-set容器-插入和删除.cpp" />
     <ClCompile Include="04-set容器-查找和统计.cpp" />
+    <ClCompile Include="05-set容器-set和multiset的区别.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

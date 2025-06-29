@@ -21,5 +21,8 @@
     <ClCompile Include="02-map容器-大小和交换.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="03-map容器-插入和删除.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

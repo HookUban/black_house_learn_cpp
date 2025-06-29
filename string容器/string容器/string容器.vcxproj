@@ -129,6 +129,7 @@
     <ClCompile Include="04-string容器字符串查找和替换.cpp" />
     <ClCompile Include="05-string容器字符串比较.cpp" />
     <ClCompile Include="06-string容器字符存取.cpp" />
+    <ClCompile Include="08-string容器子串.cpp" />
     <ClCompile Include="07-string容器插入和删除.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

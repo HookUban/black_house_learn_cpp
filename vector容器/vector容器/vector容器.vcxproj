@@ -127,6 +127,7 @@
     <ClCompile Include="02-vector容器-赋值操作.cpp" />
     <ClCompile Include="03-vector容器-容量和大小.cpp" />
     <ClCompile Include="04-vector容器的插入和删除.cpp" />
+    <ClCompile Include="05-vector容器-数据存取.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

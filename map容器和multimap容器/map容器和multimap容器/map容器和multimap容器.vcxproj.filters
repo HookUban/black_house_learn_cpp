@@ -27,5 +27,8 @@
     <ClCompile Include="04-map容器-查找和统计.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="05-map容器-排序.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -127,6 +127,7 @@
     <ClCompile Include="02-map容器-大小和交换.cpp" />
     <ClCompile Include="03-map容器-插入和删除.cpp" />
     <ClCompile Include="04-map容器-查找和统计.cpp" />
+    <ClCompile Include="05-map容器-排序.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -18,5 +18,8 @@
     <ClCompile Include="01-set容器-构造和赋值.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="02-set容器-大小和交换.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

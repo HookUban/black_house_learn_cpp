@@ -33,5 +33,8 @@
     <ClCompile Include="06-pair对组-对组的创建.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="07-set容器-排序.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

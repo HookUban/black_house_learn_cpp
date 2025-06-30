@@ -24,5 +24,8 @@
     <ClCompile Include="03-常用查找算法-find.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="04-常用查找算法-find_if.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

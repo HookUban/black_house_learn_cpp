@@ -75,5 +75,8 @@
     <ClCompile Include="20-常用集合算法-set-union.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="21-常用集合算法-set_difference.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -4,6 +4,7 @@ using namespace std;
 #include <vector>
 #include <map>
 #include "speaker.h"
+#include <algorithm>
 
 
 class SpeechManager
@@ -23,6 +24,15 @@ public:
 
 	// 创建12名选手
 	void createSpeaker();
+
+	// 开始比赛 比赛整个流程控制函数
+	void startSpeech();
+
+	// 抽签
+	void speechDraw();
+
+
+
 
 	// 成员属性
 	// 保存第一轮比赛选手编号容器

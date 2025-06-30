@@ -3,7 +3,8 @@
 // 构造函数
 SpeechManager::SpeechManager()
 {
-
+	// 初始化容器和属性
+	this->initSpeech();
 }
 
 // 菜单功能
@@ -18,6 +19,7 @@ void SpeechManager::show_Menu()
 	cout << endl;
 }	
 
+// 退出系统
 void SpeechManager::exitSystem()
 {
 	cout << "欢迎下次使用" << endl;
@@ -25,6 +27,19 @@ void SpeechManager::exitSystem()
 	exit(0);
 }
 
+
+// 初始化容器和属性
+void SpeechManager::initSpeech()
+{
+	// 容器都置空
+	this->v1.clear();
+	this->v2.clear();
+	this->vVictory.clear();
+	this->m_Speaker.clear();
+	// 初始化比赛容器
+	this->m_Index = 1;
+
+}
 // 析构函数
 SpeechManager::~SpeechManager()
 {

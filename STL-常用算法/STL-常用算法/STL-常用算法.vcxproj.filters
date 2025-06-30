@@ -57,5 +57,8 @@
     <ClCompile Include="14-常用拷贝和替换算法-replace.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="15-常用的替换算法-replace_if.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

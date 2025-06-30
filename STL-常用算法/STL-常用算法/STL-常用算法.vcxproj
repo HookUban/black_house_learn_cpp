@@ -128,6 +128,7 @@
     <ClCompile Include="03-常用查找算法-find.cpp" />
     <ClCompile Include="04-常用查找算法-find_if.cpp" />
     <ClCompile Include="05-常用查找算法-adjacent_find.cpp" />
+    <ClCompile Include="06-常用查找算法-binary_search.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

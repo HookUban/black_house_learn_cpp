@@ -142,6 +142,7 @@
     <ClCompile Include="17-常用的算术生成算法-accumulate.cpp" />
     <ClCompile Include="18-常用算术生成算法-fill.cpp" />
     <ClCompile Include="19-常用的集合算法-set_intersection.cpp" />
+    <ClCompile Include="20-常用集合算法-set-union.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -27,5 +27,8 @@
     <ClCompile Include="04-内建的函数对象-算术仿函数.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="05-内建函数对象-关系仿函数.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -69,5 +69,8 @@
     <ClCompile Include="18-常用算术生成算法-fill.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="19-常用的集合算法-set_intersection.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -21,5 +21,8 @@
     <ClCompile Include="02-常用遍历算法-transform.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="03-常用查找算法-find.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

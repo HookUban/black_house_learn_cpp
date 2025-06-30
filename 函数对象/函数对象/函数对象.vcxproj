@@ -126,6 +126,7 @@
     <ClCompile Include="01-函数对象基本使用.cpp" />
     <ClCompile Include="02-谓词-一元谓词.cpp" />
     <ClCompile Include="03-谓词-二元谓词.cpp" />
+    <ClCompile Include="04-内建的函数对象-算术仿函数.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

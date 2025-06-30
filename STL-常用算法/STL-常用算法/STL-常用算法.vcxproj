@@ -135,6 +135,7 @@
     <ClCompile Include="10-常用的排序算法-random_shuffle.cpp" />
     <ClCompile Include="11-常用排序算法-merge.cpp" />
     <ClCompile Include="12-常用排序算法-reverse.cpp" />
+    <ClCompile Include="13-常用的拷贝和替换算法-copy.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

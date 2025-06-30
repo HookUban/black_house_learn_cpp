@@ -45,5 +45,8 @@
     <ClCompile Include="10-常用的排序算法-random_shuffle.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="11-常用排序算法-merge.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

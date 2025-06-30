@@ -36,5 +36,8 @@
     <ClCompile Include="07-常用查找算法-count.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="08-常用查找算法-count_if.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -63,5 +63,8 @@
     <ClCompile Include="16-常用的算法swap.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="17-常用的算术生成算法-accumulate.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

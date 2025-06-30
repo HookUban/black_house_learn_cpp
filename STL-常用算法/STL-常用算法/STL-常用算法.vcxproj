@@ -139,6 +139,7 @@
     <ClCompile Include="14-常用拷贝和替换算法-replace.cpp" />
     <ClCompile Include="15-常用的替换算法-replace_if.cpp" />
     <ClCompile Include="16-常用的算法swap.cpp" />
+    <ClCompile Include="17-常用的算术生成算法-accumulate.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

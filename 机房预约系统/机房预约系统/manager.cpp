@@ -15,6 +15,9 @@ Manager::Manager(string name, string pwd)
 	this->m_Pwd = pwd;
 
 
+	// 初始化容器，过去所有文件中学生、老师信息
+	this->initVector();
+
 }
 
 // 菜单界面
@@ -106,4 +109,44 @@ void Manager::showComputer()
 void Manager::cleanFile()
 {
 
+}
+
+// 初始化容器
+void Manager::initVector()
+{
+	// 确保容器清空状态
+	vStu.clear();
+	vTea.clear();
+
+	// 读取信息
+	ifstream ifs;
+	ifs.open(STUDENT_FILE, ios::in);
+	if (!ifs.is_open())
+	{
+		cout << "文件读取失败" << endl;
+		return;
+	}
+
+	Student s;
+
+	while (ifs >> s.m_Id && ifs >> s.m_Name && ifs >> s.m_Pwd)
+	{
+		vStu.push_back(s);
+	}
+
+	cout << "当前学生数量：" << vStu.size() << endl;
+	ifs.close();
+
+	// 读取老师信息
+	ifs.open(TEACHER_FILE, ios::in);
+	Teacher t;
+
+	while (ifs >> t.m_EmpId && ifs >> t.m_Name && ifs >> t.m_Pwd)
+	{
+		vTea.push_back(t);
+	}
+
+	cout << "当前老师数量：" << vTea.size() << endl;
+
+	ifs.close();
 }

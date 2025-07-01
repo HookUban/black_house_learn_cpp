@@ -129,6 +129,7 @@
     <ClCompile Include="机房预约系统.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="globalFile.h" />
     <ClInclude Include="Identity.h" />
     <ClInclude Include="manager.h" />
     <ClInclude Include="student.h" />

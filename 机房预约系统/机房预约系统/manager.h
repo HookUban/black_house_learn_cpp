@@ -39,6 +39,10 @@ public:
 	// 初始化容器
 	void initVector();
 
+	// 检测重复 参数1 检测学号 参数2 检测类型
+	bool checkRepeat(int id, int type);  
+
+
 	// 学生容器
 	vector<Student> vStu;
 	// 教师容器

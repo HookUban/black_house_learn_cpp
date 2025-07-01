@@ -16,7 +16,7 @@ int main()
 
 	//}
 
-
+	srand((unsigned int)time(NULL));
 
 	int choice = 0;
 	while (true)

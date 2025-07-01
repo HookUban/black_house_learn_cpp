@@ -4,6 +4,9 @@ using namespace std;
 #include "Identity.h"
 #include <fstream>
 #include "globalFile.h"
+#include "student.h"
+#include "teacher.h"
+#include "manager.h"
 
 
 // 登录的功能 参数1 操作文件名称 参数2 操作身份类型
@@ -48,7 +51,31 @@ void LoginIn(string fileName, int type)
 	if (type == 1)
 	{
 		// 学生身份验证
+		int fId; // 从文件中读取的id号
+		string fName; // 从文件中获取的姓名
+		string fPwd; // 从文件中获取密码
 
+		while (ifs >> fId && ifs >> fName && ifs >> fPwd)
+		{
+			cout << fId << endl;
+			cout << fName << endl;
+			cout << fPwd << endl;
+
+			// 与用户输入的信息作对比
+			if (fId == id && fName == name && fPwd == pwd)
+			{
+				cout << "学生验证登录成功！" << endl;
+				system("pause");
+				system("cls");
+
+				person = new Student(id, name, pwd);
+				// 进入学生身份的子菜单
+
+
+
+				return;
+			}
+		}
 	}
 	else if (type == 2)
 	{
@@ -80,7 +107,7 @@ int main()
 		cout << "\t\t|                           |\n";
 		cout << "\t\t|        3.管 理 员         |\n";
 		cout << "\t\t|                           |\n";
-		cout << "\t\t|        4.退    出         |\n";
+		cout << "\t\t|        0.退    出         |\n";
 		cout << "\t\t|                           |\n";
 		cout << "\t\t ---------------------------\n";
 		cout << "请输入您的选择:";

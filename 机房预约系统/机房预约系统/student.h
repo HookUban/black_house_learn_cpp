@@ -2,6 +2,11 @@
 #include <iostream>
 using namespace std;
 #include "Identity.h"
+#include <vector>
+#include "computerRoom.h"
+#include <fstream>
+#include "globalFile.h"
+
 
 // 学生类
 class Student : public Identity
@@ -24,4 +29,6 @@ public:
 	void cancelOrder();
 	// 学生学号
 	int m_Id;
+	// 机房容器
+	vector<ComputerRoom> vCom;
 };

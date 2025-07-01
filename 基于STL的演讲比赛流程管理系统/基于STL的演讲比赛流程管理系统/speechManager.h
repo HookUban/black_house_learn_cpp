@@ -36,7 +36,8 @@ public:
 	// 比赛
 	void speechContest();
 
-
+	// 显示分数
+	void showScore();
 
 
 	// 成员属性

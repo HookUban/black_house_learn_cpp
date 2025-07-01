@@ -7,7 +7,7 @@ using namespace std;
 #include <algorithm>
 #include <deque>
 #include <numeric>
-
+#include <fstream>
 
 class SpeechManager
 {
@@ -38,6 +38,9 @@ public:
 
 	// 显示分数
 	void showScore();
+
+	// 报错分数
+	void saveRecord();
 
 
 	// 成员属性

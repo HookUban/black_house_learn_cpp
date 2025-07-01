@@ -15,6 +15,7 @@ void SpeechManager::show_Menu()
 	cout << "*****************************************" << endl;
 	cout << "*********    欢迎参加演讲比赛  **********" << endl;
 	cout << "*********    1.开始演讲比赛    **********" << endl;
+	cout << "*********    2.查看往届记录    **********" << endl;
 	cout << "*********    3.清空比赛记录    **********" << endl;
 	cout << "*********    0.退出比赛程序    **********" << endl;
 	cout << "********************;********************" << endl;
@@ -92,7 +93,12 @@ void SpeechManager::startSpeech()
 	// 3.显示最终结果
 	this->showScore();
 	// 保存分数到文件中
+	this->saveRecord();
 
+	cout << "本届比赛完毕！" << endl;
+	
+	system("pause");
+	system("cls");
 }
 
 void SpeechManager::speechDraw()
@@ -232,6 +238,25 @@ void SpeechManager::showScore()
 	system("cls");
 
 	this->show_Menu();
+}
+
+void SpeechManager::saveRecord()
+{
+	ofstream ofs;
+	ofs.open("speech.csv", ios::out | ios::app);	// 用追加的方式写文件
+
+	// 将每个人数据写入到文件中
+	for (vector<int>::iterator it = vVictory.begin(); it != vVictory.end(); it++)
+	{
+		ofs << *it << "," << this->m_Speaker[*it].m_Score[1] << ",";
+	}
+	ofs << endl;
+
+	// 关闭文件
+	ofs.close();
+
+	cout << "记录已经保存" << endl;
+
 }
 
 // 析构函数

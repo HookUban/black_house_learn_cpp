@@ -39,9 +39,15 @@ public:
 	// 显示分数
 	void showScore();
 
-	// 报错分数
+	// 保存分数
 	void saveRecord();
 
+	// 读取记录
+	void loadRecord();
+	// 判断文件是否为空
+	bool fileIsEmpty;
+	// 存放往届记录容器
+	map<int, vector<string>>m_Record;
 
 	// 成员属性
 	// 保存第一轮比赛选手编号容器

@@ -83,14 +83,14 @@ void SpeechManager::startSpeech()
 	this->showScore();
 
 	// 第二轮开始比赛
-
+	this->m_Index++;
 	// 1.抽签
-
+	speechDraw();
 	// 2.比赛
-
+	speechContest();
 
 	// 3.显示最终结果
-
+	this->showScore();
 	// 保存分数到文件中
 
 }

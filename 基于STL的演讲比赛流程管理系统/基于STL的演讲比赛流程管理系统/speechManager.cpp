@@ -290,14 +290,41 @@ void SpeechManager::loadRecord()
 	ifs.putback(ch); // 将上面读取的单个字符，放回来
 
 	string data;
+	int index = 0;
 
 	while (ifs >> data)
 	{
-		cout << data << endl;
+		//cout << data << endl;
+		vector<string> v; // 存放6个string字符串
+
+
+		int pos = -1;	// 查到","位置的变量
+		int start = 0;
+		
+		while (true)
+		{
+			pos = data.find(",", start);
+			if (pos == -1)
+			{
+				break;
+			}
+			string temp = data.substr(start, pos - start);
+			//cout << temp << endl;
+			v.push_back(temp);
+
+			start = pos + 1;
+
+		}
+		this->m_Record.insert(make_pair(index, v));
+		index++;
 	}
 
 	ifs.close();	
 
+	for (map<int, vector<string>>::iterator it = m_Record.begin(); it != m_Record.end(); it++)
+	{
+		cout << it->first << "冠军编号：" << it->second[0] << " 分数：" << it->second[1] << endl;
+	}
 }
 
 

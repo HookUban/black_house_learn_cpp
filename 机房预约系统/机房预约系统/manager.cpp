@@ -78,7 +78,7 @@ void Manager::addPerson()
 
 	cout << tip << endl;
 	while (true)
-	{
+	{ 
 		cin >> id;
 		bool ret = checkRepeat(id, select);
 		if (ret)
@@ -150,7 +150,7 @@ void Manager::initVector()
 		vStu.push_back(s);
 	}
 
-	//cout << "当前学生数量：" << vStu.size() << endl;
+	cout << "当前学生数量：" << vStu.size() << endl;
 	ifs.close();
 
 	// 读取老师信息
@@ -162,7 +162,7 @@ void Manager::initVector()
 		vTea.push_back(t);
 	}
 
-	//cout << "当前老师数量：" << vTea.size() << endl;
+	cout << "当前老师数量：" << vTea.size() << endl;
 
 	ifs.close();
 }

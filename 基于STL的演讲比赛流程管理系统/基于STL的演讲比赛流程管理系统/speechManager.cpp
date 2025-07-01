@@ -77,7 +77,7 @@ void SpeechManager::startSpeech()
 	this->speechDraw();
 
 	// 2.比赛
-
+	this->speechContest();
 
 	// 3.显示晋级结果
 
@@ -125,6 +125,87 @@ void SpeechManager::speechDraw()
 	cout << endl;
 }
 
+
+// 比赛
+void SpeechManager::speechContest()
+{
+	cout << "---------------第" << this->m_Index << "轮比赛正式开始----------------" << endl;
+	// 准备临时容器 存放小组成绩
+	multimap<double, int, greater<double>> groupScore;
+
+	int num = 0; // 用于记录人员个数 6人一组
+
+
+	vector<int> v_Src; // 比赛人员容器
+	if (this->m_Index == 1)
+	{
+		v_Src = v1;
+	}
+	else
+	{
+		v_Src = v2;
+
+	}
+
+	// 遍历所有选手进行比赛
+	for (vector<int>::iterator it = v_Src.begin(); it != v_Src.end(); it++)
+	{
+		num++;
+		// 评委打分
+		deque<double> d;
+		for (int i = 0; i < 10; i++)
+		{
+			double score = (rand() % 401 + 600) / 10.f;
+			//cout << score << " ";
+			d.push_back(score);
+		}
+		sort(d.begin(), d.end(), greater<double>());
+		d.pop_front();
+		d.pop_back();
+
+		double sum = accumulate(d.begin(), d.end(), 0.0f);
+		double avg = sum / (double)d.size();
+
+		//  打印平均分
+		//cout << "编号：" << *it << " 姓名：" << this->m_Speaker[*it].m_Name << " 获取平均分：" << avg << endl;
+		
+
+		// 将平均分放入map容器
+		this->m_Speaker[*it].m_Score[this->m_Index - 1] = avg;
+
+		// 将打分数据 放入临时小组容器中
+		groupScore.insert(make_pair(avg, *it)); // key 是得分，value是具体选手编号
+		// 每6人去除前三名
+
+		if (num % 6 == 0)
+		{
+			cout << "第" << num / 6 << "小组比赛名次：" << endl;
+			for (multimap<double, int, greater<double>>::iterator it = groupScore.begin(); it != groupScore.end(); it++)
+			{
+				cout << "编号：" << it->second << " 姓名：" << this->m_Speaker[it->second].m_Name << " 成绩：" << this->m_Speaker[it->second].m_Score[this->m_Index - 1] << endl;
+
+			}
+
+			// 取走前三名
+			int count = 0;
+			for (multimap<double, int, greater<double>>::iterator it = groupScore.begin(); it != groupScore.end() && count < 3; it++, count++)
+			{
+				if (this->m_Index == 1)
+				{
+					v2.push_back((*it).second);
+				}
+				else
+				{
+					vVictory.push_back((*it).second);
+				}
+			}
+			groupScore.clear();
+			cout << endl;
+		}
+	}
+	cout << "----------------第" << this->m_Index << "轮比赛完毕----------------" << endl;
+	system("pause");
+}
 
 // 析构函数
 SpeechManager::~SpeechManager()

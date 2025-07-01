@@ -5,6 +5,8 @@ using namespace std;
 #include <map>
 #include "speaker.h"
 #include <algorithm>
+#include <deque>
+#include <numeric>
 
 
 class SpeechManager
@@ -30,6 +32,9 @@ public:
 
 	// ≥È«©
 	void speechDraw();
+
+	// ±»»¸
+	void speechContest();
 
 
 

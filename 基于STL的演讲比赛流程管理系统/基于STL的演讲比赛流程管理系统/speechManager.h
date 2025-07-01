@@ -49,6 +49,14 @@ public:
 	// 存放往届记录容器
 	map<int, vector<string>>m_Record;
 
+	// 显示往届记录
+	void showRecord();
+
+
+
+
+
+
 	// 成员属性
 	// 保存第一轮比赛选手编号容器
 	vector<int> v1;
@@ -60,6 +68,7 @@ public:
 
 	// 存放编号以及对应的具体选手容器
 	map<int, Speaker>m_Speaker;
+
 
 	 // 存放比赛轮数
 	int m_Index;

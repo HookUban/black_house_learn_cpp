@@ -120,6 +120,7 @@ void Student::applyOrder()
 // 查看自身预约
 void Student::showMyOrder()
 {
+	OrderFile of;
 
 }
 // 查看所有预约

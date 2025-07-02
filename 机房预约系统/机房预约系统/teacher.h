@@ -2,6 +2,7 @@
 #include <iostream>
 using namespace std;
 #include "Identity.h"
+#include "orderFile.h"
 
 class Teacher : public Identity
 {
